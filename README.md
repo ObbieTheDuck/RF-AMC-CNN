@@ -31,7 +31,7 @@ modulation classification model and analyzing its performance under different SN
 
 
 
-# Results and Experiments
+# Experiments and Results
 
 ## *Dataset*
 The dataset used in this work is based on a RadioML-style dataset that contains multiple digital modulation schemes across a wide range of signal-to-noise ratio (SNR) values. The modulation types included in the dataset are BPSK, QPSK, 8PSK, 16QAM, and 64QAM, which represent commonly used communication schemes with varying levels of complexity. 
@@ -56,6 +56,7 @@ The experimental results indicate that the CNN model is capable of learning mean
 The model is trained using the Adam optimizer with batch sizes of 64 and 128 over 20 to 50 epochs. The trained model is then tested on unseen data to evaluate its generalization performance.  At low SNR values (e.g., -20
 dB), the signal is highly distorted by noise, resulting in low classification accuracy. As the SNR increases, the signal becomes clearer and the model achieves significantly higher accuracy.
 
+
 ###  SNR Impact
 
 ![ClasAccVsSNR](https://github.com/ObbieTheDuck/RF-AMC-CNN/blob/main/GitHubRFAMCCNNPictures/ClasAccVsSNR.PNG)
@@ -73,6 +74,7 @@ around 70–80%
 
 • At high SNR (≥ 10 dB): accuracy reaches 85–95%
 
+
 ### Confusion Matrix
 
 ![PerClasClasAcc](https://github.com/ObbieTheDuck/RF-AMC-CNN/blob/main/GitHubRFAMCCNNPictures/PerClasClasAcc.PNG)
@@ -87,7 +89,10 @@ Misclassification errors primarily occur between modulation types with similar s
 
 These errors highlight the limitations of the model in distinguishing between closely related modulation schemes and suggest that more advanced architectures may improve performance.
 
+
 ### Hyperparameter Sensitivity
+
+The performance of the CNN model is sensitive to changes in hyperparameters such as learning rate, batch size, and number of training epochs.
 
 ![ClasAccDifSNRLvl](https://github.com/ObbieTheDuck/RF-AMC-CNN/blob/main/GitHubRFAMCCNNPictures/ClasAccDifSNRLvl.PNG)
 
@@ -97,9 +102,42 @@ These errors highlight the limitations of the model in distinguishing between cl
 
 **Table 3**: Training Configuration Parameters
 
-The performance of the CNN model is sensitive to changes in hyperparameters such as learning rate, batch size, and number of training epochs.
+
+The performance of the CNN model is influenced by several hyperparameters. Increasing the number of training epochs generally improves accuracy up to a certain
+point, after which overfitting may occur. 
+
+Batch size also affects performance. Smaller batch sizes lead to more stable convergence but increase training time, while larger batch sizes speed up training but may reduce generalization performance. 
+
+The learning rate controls how quickly the model updates its weights. A high learning rate may cause instability, while a low learning rate may slow down convergence.
+
+These observations demonstrate the importance of carefully selecting hyperparameters to achieve optimal performance.
+
+![TrainLossEpochs](https://github.com/ObbieTheDuck/RF-AMC-CNN/blob/main/GitHubRFAMCCNNPictures/TrainLossEpochs.PNG)
+
+**Fig.4**: Training Loss as a Function of Epochs
+
+![EffectsTrainEpochClasAcc](https://github.com/ObbieTheDuck/RF-AMC-CNN/blob/main/GitHubRFAMCCNNPictures/EffectsTrainEpochClasAcc.PNG)
+
+**Fig.5**: Effect of Training Epochs on Classification Accuracy
+
+![EffectsBatchSizeClasAcc](https://github.com/ObbieTheDuck/RF-AMC-CNN/blob/main/GitHubRFAMCCNNPictures/EffectsBatchSizeClasAcc.PNG)
+
+**Fig.6**: Effect of Batch Size on Classification Accuracy
 
 
+### Benchmark Model Comparison
+
+Benchmark implementations, such as those provided in the AMR Benchmark repository, demonstrate that deeper networks and hybrid models can achieve high classification accuracy, particularly at moderate and high SNR levels. These models are designed to capture both spatial and temporal dependencies in the signal, which can improve performance for complex modulation schemes.
+
+Compared to these models, the proposed CNN architecture provides a simpler and more computationally efficient solution. While it may not achieve the same level of performance as more complex architectures in all scenarios, it demonstrates strong classification accuracy across a wide range of SNR values.
+
+One advantage of the proposed model is its ability to learn directly from raw I/Q data without requiring additional preprocessing or feature engineering. This simplifies implementation and reduces computational overhead.
+
+However, benchmark models that incorporate recurrent layers or deeper convolutional structures may provide improved performance in challenging conditions, such as very low SNR levels or when distinguishing between similar modulation types
+
+![CompCNNBenchmarks](https://github.com/ObbieTheDuck/RF-AMC-CNN/blob/main/GitHubRFAMCCNNPictures/CompCNNBenchmarks.PNG)
+
+**Fig.7**: Comparison of Proposed CNN with Benchmark Models
 
 # Architecture
 
