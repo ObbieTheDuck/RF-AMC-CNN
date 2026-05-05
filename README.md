@@ -106,23 +106,24 @@ The performance of the CNN model is sensitive to changes in hyperparameters such
 The performance of the CNN model is influenced by several hyperparameters. Increasing the number of training epochs generally improves accuracy up to a certain
 point, after which overfitting may occur. 
 
-Batch size also affects performance. Smaller batch sizes lead to more stable convergence but increase training time, while larger batch sizes speed up training but may reduce generalization performance. 
-
 The learning rate controls how quickly the model updates its weights. A high learning rate may cause instability, while a low learning rate may slow down convergence.
-
-These observations demonstrate the importance of carefully selecting hyperparameters to achieve optimal performance.
 
 ![TrainLossEpochs](https://github.com/ObbieTheDuck/RF-AMC-CNN/blob/main/GitHubRFAMCCNNPictures/TrainLossEpochs.PNG)
 
 **Fig.4**: Training Loss as a Function of Epochs
 
+
 ![EffectsTrainEpochClasAcc](https://github.com/ObbieTheDuck/RF-AMC-CNN/blob/main/GitHubRFAMCCNNPictures/EffectsTrainEpochClasAcc.PNG)
 
 **Fig.5**: Effect of Training Epochs on Classification Accuracy
 
+Batch size also affects performance. Smaller batch sizes lead to more stable convergence but increase training time, while larger batch sizes speed up training but may reduce generalization performance. 
+
 ![EffectsBatchSizeClasAcc](https://github.com/ObbieTheDuck/RF-AMC-CNN/blob/main/GitHubRFAMCCNNPictures/EffectsBatchSizeClasAcc.PNG)
 
 **Fig.6**: Effect of Batch Size on Classification Accuracy
+
+These observations demonstrate the importance of carefully selecting hyperparameters to achieve optimal performance.
 
 
 ### Benchmark Model Comparison
