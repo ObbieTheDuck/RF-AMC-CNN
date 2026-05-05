@@ -3,7 +3,7 @@ Source code for the paper is based off of "AMC-Benchmark" from Richardzhangxx, p
 
 Representative and up-to-date models in the AMR field are implemented on dataset RML2016.10a.
 
-Github is avaiblbe here: [AMC-Benchmark](https://github.com/Richardzhangxx/AMR-Benchmark)
+Github is available here: [AMC-Benchmark](https://github.com/Richardzhangxx/AMR-Benchmark)
 
 The article is available here: [Deep Learning Based Automatic Modulation Recognition: Models, Datasets, and Challenges](https://www.sciencedirect.com/science/article/pii/S1051200422002676?via%3Dihub)
 
@@ -130,6 +130,19 @@ This work evaluates a CNN-based AMC system and analyzes how SNR and training par
 |CGDNet| [CGDNet: Efficient Hybrid Deep Learning Model for Robust Automatic Modulation Recognition](https://ieeexplore.ieee.org/abstract/document/9349627)  | 2021   |
 |PET-CGDNN|[An Efficient Deep Learning Model for Automatic Modulation Recognition Based on Parameter Estimation and Transformation](https://ieeexplore.ieee.org/abstract/document/9507514)|2021    |
 |1DCNN-PF|[Automatic Modulation Classification Using Parallel Fusion of Convolutional Neural Networks](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Automatic+Modulation+Classification+Using+Parallel+Fusion+of+Convolutional+Neural+Networks&btnG=)   | 2019   |
+
+
+
+# Acknowledgement
+Our work is based on [Fuxin "Richardzhangxx" Zhang](https://github.com/Richardzhangxx).
+
+# Citation
+Please cite the literature we refer to if they are helpful to your work.
+If our work is helpful to your research, please cite:
+
+
+
+
 
 
 
