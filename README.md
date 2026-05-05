@@ -139,7 +139,7 @@ However, benchmark models that incorporate recurrent layers or deeper convolutio
 
 **Fig.7**: Comparison of Proposed CNN with Benchmark Models
 
-## Conclusion
+## *Conclusion*
 In this work, we presented a convolutional neural network (CNN)-based approach for automatic modulation classification using raw in-phase and quadrature (I/Q) signal data. The model was trained and evaluated on a RadioML-style dataset across a wide range of signal-tonoise ratio (SNR) values.
 
 The results demonstrate that CNN-based models are capable of learning meaningful signal features directly from raw data without the need for handcrafted feature extraction. The classification accuracy improves significantly as the SNR increases, confirming the effectiveness of the model in cleaner signal environments. However, performance degrades under extremely noisy conditions, highlighting a key limitation of the approach.
