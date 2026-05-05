@@ -35,14 +35,18 @@ modulation classification model and analyzing its performance under different SN
 ## Evaluation Metric
 • classification accuracy
 
+![ClasAcc](https://github.com/ObbieTheDuck/RF-AMC-CNN/blob/main/GitHubRFAMCCNNPictures/ClasAcc.PNG)
+
+**Fig.1** classification Cccuracy Equation
+
 
 # Architecture
 
-## Input
+## *Input*
 128 × 2
 
 
-## Description
+## *Description*
 The proposed CNN architecture is designed to efficiently extract temporal and structural features from raw I/Q signal data. The input to the network is a 128 × 2 matrix representing the in-phase and quadrature components of
 the signal. The first convolutional layer applies multiple filters with small kernel sizes to capture local variations
 in amplitude and phase. These early-stage filters focus on low-level waveform features such as transitions, peaks, and signal continuity.
@@ -52,7 +56,7 @@ As the signal propagates through subsequent convolutional layers, the number of 
 Dropout layers are incorporated during training to prevent overfitting by randomly disabling neurons, which enhances the model’s ability to generalize to unseen data. The extracted features are then passed to a fully connected layer, which aggregates the learned representations and maps them to the output classes. Finally, a Softmax layer produces a probability distribution over all modulation types, allowing the model to select the most likely classification.
 
 
-## Extraction Process
+## *Extraction Process*
 The CNN extracts important features from the I/Q signal by using convolutional filters. These filters look for patterns in the signal, such as changes in amplitude, phase, peaks, and transitions.
 
 Real signals can be affected by noise, interference, fading, and distortion. Because of this, the signal shape can change. The CNN helps by learning which features are most useful for classification during training instead of relying on fixed handcrafted features.
@@ -68,7 +72,7 @@ Dropout is used during training to prevent the model from relying too much on on
 Finally, the fully connected layer combines all the learned features, and the Softmax layer gives the probability for each modulation type. The model then selects the class with the highest probability.
 
 
-## Layers
+## *Layers*
 The model consists of the following layers:
 
 • Convolutional layers for feature extraction
@@ -84,11 +88,12 @@ The model consists of the following layers:
 • Softmax output for probability distribution
 
 
-## Loss Fuction
+## *Loss Fuction*
 categorical cross-entropy loss
 
+![LossFuc](https://github.com/ObbieTheDuck/RF-AMC-CNN/blob/main/GitHubRFAMCCNNPictures/LossFuc.PNG)
 
-## Training Setup
+## *Training Setup*
 • Batch size: 64 or 128
 
 • Epochs: 20–50
@@ -96,18 +101,18 @@ categorical cross-entropy loss
 • Learning rate: tuned experimentally
 
 
-## Contribution
+## *Contribution*
 This work evaluates a CNN-based AMC system and analyzes how SNR and training parameters affect classification performance.
 
 
 # Dataset
 
-**Table2** Main AMR open datasets for SISO systems.
-![1658233963147](https://user-images.githubusercontent.com/56213845/179750964-f49c2657-3348-48b2-86bc-dd3855b56378.png)
-
 | Dataset | Link |Notes |
 | :-----:| :----: | :----: |
 | [RML2016.10a](https://pubs.gnuradio.org/index.php/grcon/article/view/11) | [RML](http://radioml.com) | Other Datasets are available such as [RML2016.10b](https://pubs.gnuradio.org/index.php/grcon/article/view/11), [RML2018.01a](https://ieeexplore.ieee.org/abstract/document/8267032), [HisarMod2019.1](https://ieeexplore.ieee.org/abstract/document/9128408), that were used in [AMR-Benchmark](https://github.com/Richardzhangxx/AMR-Benchmark) |
+
+**Table2** All possible datasets that can be used for AMC.
+![1658233963147](https://user-images.githubusercontent.com/56213845/179750964-f49c2657-3348-48b2-86bc-dd3855b56378.png)
 
 
 
