@@ -107,7 +107,7 @@ This work evaluates a CNN-based AMC system and analyzes how SNR and training par
 
 | Dataset | Link |Notes |
 | :-----:| :----: | :----: |
-| [RML2016.10a](https://pubs.gnuradio.org/index.php/grcon/article/view/11) | [RML](http://radioml.com) | Other Datasets are avaiable such as [RML2016.10b, RML2018.01a, HisarMod2019.1](https://pubs.gnuradio.org/index.php/grcon/article/view/1) used in [AMR-Benchmark](https://github.com/Richardzhangxx/AMR-Benchmark) |
+| [RML2016.10a](https://pubs.gnuradio.org/index.php/grcon/article/view/11) | [RML](http://radioml.com) | Other Datasets are available such as [RML2016.10b, RML2018.01a, HisarMod2019.1](https://pubs.gnuradio.org/index.php/grcon/article/view/1), that were used in [AMR-Benchmark](https://github.com/Richardzhangxx/AMR-Benchmark) |
 
 
 
