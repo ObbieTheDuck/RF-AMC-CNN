@@ -43,7 +43,7 @@ The dataset includes signals with SNR values ranging from -20 dB to +18 dB, allo
 
 
 ## *Evaluation Metric*
-• classification accuracy
+• Classification Accuracy
 
 ![ClasAcc](https://github.com/ObbieTheDuck/RF-AMC-CNN/blob/main/GitHubRFAMCCNNPictures/ClasAcc.PNG)
 
@@ -139,6 +139,35 @@ However, benchmark models that incorporate recurrent layers or deeper convolutio
 
 **Fig.7**: Comparison of Proposed CNN with Benchmark Models
 
+## Conclusion
+In this work, we presented a convolutional neural network (CNN)-based approach for automatic modulation classification using raw in-phase and quadrature (I/Q) signal data. The model was trained and evaluated on a RadioML-style dataset across a wide range of signal-tonoise ratio (SNR) values.
+
+The results demonstrate that CNN-based models are capable of learning meaningful signal features directly from raw data without the need for handcrafted feature extraction. The classification accuracy improves significantly as the SNR increases, confirming the effectiveness of the model in cleaner signal environments. However, performance degrades under extremely noisy conditions, highlighting a key limitation of the approach.
+
+We also analyzed the impact of training parameters such as batch size and number of epochs. The results show that proper tuning of these hyperparameters is important for achieving optimal performance and avoiding overfitting.
+
+### Limitations
+Despite strong performance at high SNR levels, the model struggles in extremely noisy conditions. This limitation suggests that more advanced architectures or data augmentation techniques may be required to improve robustness.
+
+### Contributions
+The contributions of each group member are as follows:
+
+• Youssef Shawky: Implemented the CNN model,
+conducted experiments, and analyzed results.
+
+• Steven Soto: Assisted with dataset preparation,
+model testing, and performance evaluation.
+
+• Michael Ehrenberger: Contributed to research,
+documentation, and presentation development.
+
+### Future Work
+
+Future improvements may include the use of more advanced architectures such as hybrid CNN-LSTM models to better capture temporal dependencies in signal data. 
+
+Additionally, evaluating the model on multiple datasets and improving performance under low SNR conditions remain important areas for further research. Real-time implementation of modulation classification systems is another potential direction for future work.
+
+
 # Architecture
 
 ## *Input*
@@ -188,11 +217,11 @@ The model consists of the following layers:
 
 
 ## *Loss Fuction*
-categorical cross-entropy loss
+Categorical cross-entropy loss.
 
 ![LossFuc](https://github.com/ObbieTheDuck/RF-AMC-CNN/blob/main/GitHubRFAMCCNNPictures/LossFuc.PNG)
 
-**Fig.1** classification Cccuracy Equation
+**Fig.8**: Classification Accuracy Equation
 
 ## *Training Setup*
 • Batch size: 64 or 128
@@ -212,7 +241,7 @@ This work evaluates a CNN-based AMC system and analyzes how SNR and training par
 | :-----:| :----: | :----: |
 | [RML2016.10a](https://pubs.gnuradio.org/index.php/grcon/article/view/11) | [RML](http://radioml.com) | Other Datasets are available such as [RML2016.10b](https://pubs.gnuradio.org/index.php/grcon/article/view/11), [RML2018.01a](https://ieeexplore.ieee.org/abstract/document/8267032), [HisarMod2019.1](https://ieeexplore.ieee.org/abstract/document/9128408), that were used in [AMR-Benchmark](https://github.com/Richardzhangxx/AMR-Benchmark) |
 
-**Table2** All possible datasets that can be used for AMC.
+**Table 5**: All possible datasets that can be used for AMC.
 ![1658233963147](https://user-images.githubusercontent.com/56213845/179750964-f49c2657-3348-48b2-86bc-dd3855b56378.png)
 
 
@@ -238,7 +267,6 @@ This work evaluates a CNN-based AMC system and analyzes how SNR and training par
 |1DCNN-PF|[Automatic Modulation Classification Using Parallel Fusion of Convolutional Neural Networks](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Automatic+Modulation+Classification+Using+Parallel+Fusion+of+Convolutional+Neural+Networks&btnG=)   | 2019   |
 
 
-
 # Acknowledgement
 Our work is based on [Fuxin "Richardzhangxx" Zhang](https://github.com/Richardzhangxx).
 
@@ -246,7 +274,23 @@ Our work is based on [Fuxin "Richardzhangxx" Zhang](https://github.com/Richardzh
 Please cite the literature we refer to if they are helpful to your work.
 If our work is helpful to your research, please cite:
 
+[1] T. J. O’Shea and J. Corgan, “Convolutional Radio
+Modulation Recognition Networks,” International
+Conference on Engineering Applications of Neural
+Networks (EANN), 2016.
 
+[2] T. J. O’Shea, “RadioML: Machine Learning Dataset for Radio Signals,” Available:
+https://www.deepsig.ai/datasets
+
+[3] S. Rajendran et al., “Deep Learning Models for Wireless Signal Classification with Distributed Low-Cost
+Spectrum Sensors,” IEEE Transactions on Cognitive
+Communications and Networking, 2018.
+
+[4] R. Zhang, “AMR Benchmark: A Unified Implementation of Deep Learning Models for
+Automatic Modulation Recognition,” Available: https://github.com/Richardzhangxx/AMRBenchmark
+
+[5] I. Goodfellow, Y. Bengio, and A. Courville, Deep
+Learning, MIT Press, 2016.
 
 
 
