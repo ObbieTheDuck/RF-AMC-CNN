@@ -3,9 +3,9 @@ Source code for the paper is based off of "AMC-Benchmark" from Richardzhangxx, p
 
 Representative and up-to-date models in the AMR field are implemented on four different datasets (RML2016.10a, RML2016.10b, RML2018.01a, HisarMod2019.1).
 
-Github is avaiblbe here:[AMC-Benchmark](https://github.com/Richardzhangxx/AMR-Benchmark)
+Github is avaiblbe here: [AMC-Benchmark](https://github.com/Richardzhangxx/AMR-Benchmark)
 
-The article is available here:[Deep Learning Based Automatic Modulation Recognition: Models, Datasets, and Challenges](https://www.sciencedirect.com/science/article/pii/S1051200422002676?via%3Dihub)
+The article is available here: [Deep Learning Based Automatic Modulation Recognition: Models, Datasets, and Challenges](https://www.sciencedirect.com/science/article/pii/S1051200422002676?via%3Dihub)
 
 # Abstract
 Automatic modulation classification (AMC) plays a critical role in modern wireless communication systems. Traditional methods rely on handcrafted features and perform
